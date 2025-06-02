@@ -13,7 +13,7 @@ class git_hub_event(Document):
 
 
 app = Flask(__name__)
-connect(host="mongodb+srv://saadjamalsaifi:Saad1998@cluster0.vu75s2z.mongodb.net/github_events?retryWrites=true&w=majority&appName=Cluster0")
+connect(host="mongodb+srv://saadjamalsaifi:Saad1998@cluster0.vu75s2z.mongodb.net/github_events?retryWrites=true&w=majority&appName=Cluster0",alias="default")
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
