@@ -52,4 +52,4 @@ def get_events():
 
 if __name__ == '__main__':
     port=int(os.environ("PORT",5000))
-    app.run(host="0.0.0.0",port=port)
+    app.run(host=["13.228.225.19,18.142.128.26,54.254.162.138"],port=port)
