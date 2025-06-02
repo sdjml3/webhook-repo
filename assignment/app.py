@@ -13,7 +13,7 @@ class git_hub_event(Document):
 
 
 app = Flask(__name__)
-mongo_uri=os.getenv("mongodb+srv://saadjamalsaifi:Saad1998@cluster0.vu75s2z.mongodb.net/githubrepo?retryWrites=true&w=majority&appName=Cluster0")
+mongo_uri=os.getenv("MONGODB_URI")
 connect(host=mongo_uri)
 
 @app.route('/webhook', methods=['POST'])
