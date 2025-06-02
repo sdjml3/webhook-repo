@@ -10,6 +10,9 @@ class git_hub_event(Document):
     from_branch = StringField()
     to_branch = StringField(required=True)
     timestamp = DateTimeField(required=True)
+    meta={
+        'collection':'githubrepo'
+    }
 
 
 app = Flask(__name__)
