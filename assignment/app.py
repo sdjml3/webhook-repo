@@ -1,8 +1,8 @@
-# models.py
 from mongoengine import Document, StringField, DateTimeField
 from flask import Flask, request, jsonify, render_template
 from mongoengine import connect
 from datetime import datetime
+import os
 
 class git_hub_event(Document):
     action_type = StringField(required=True)
@@ -51,4 +51,5 @@ def get_events():
     } for e in events])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port=int(os.environ("PORT",5000))
+    app.run(host="0.0.0.0",port=port)
