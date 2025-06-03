@@ -24,7 +24,7 @@ def webhook():
     data = request.json
     event_type = request.headers.get('X-GitHub-Event')
     author = data.get('pusher', {}).get('name') or data.get('sender', {}).get('login')
-    utc_plus_530=timezone(timedelta(hours=5,minutes=30))
+    utc_plus_530=timezone(timedelta(hours=0,minutes=0))
     timestamp = datetime.now(utc_plus_530)
     to_branch = data.get('ref', '').split('/')[-1] if data.get('ref') else None
     from_branch = data.get('pull_request', {}).get('head', {}).get('ref')
