@@ -51,7 +51,7 @@ def get_events():
         "author": e.author,
         "from_branch": e.from_branch,
         "to_branch": e.to_branch,
-        "timestamp": e.timestamp.strftime("%d %B %Y - %X) 
+        "timestamp": e.timestamp.strftime("%d %B %Y - %X") 
     } for e in events])
 
 if __name__ == '__main__':
