@@ -2,7 +2,6 @@ from mongoengine import Document, StringField, DateTimeField
 from flask import Flask, request, jsonify, render_template
 from mongoengine import connect
 from datetime import datetime
-from zoneinfo import ZoneInfo
 import os
 
 class git_hub_event(Document):
@@ -25,7 +24,7 @@ def webhook():
     data = request.json
     event_type = request.headers.get('X-GitHub-Event')
     author = data.get('pusher', {}).get('name') or data.get('sender', {}).get('login')
-    timestamp = datetime.utcnow(ZoneInfo("Asia/Kolkata"))
+    timestamp = datetime.utcnow()
     to_branch = data.get('ref', '').split('/')[-1] if data.get('ref') else None
     from_branch = data.get('pull_request', {}).get('head', {}).get('ref')
     to_branch_pr = data.get('pull_request', {}).get('base', {}).get('ref')
