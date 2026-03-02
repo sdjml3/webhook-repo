@@ -51,11 +51,12 @@ def get_events():
         "author": e.author,
         "from_branch": e.from_branch,
         "to_branch": e.to_branch,
-        "timestamp": e.timestamp.isoformat()
+        "timestamp": e.timestamp.replace(tzinfo=timezone.utc).isoformat()
     } for e in events])
 
 
 if __name__ == '__main__':
     port=int(os.environ("PORT",4000))
     app.run(host="0.0.0.0",port=port)
+
 
