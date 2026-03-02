@@ -51,7 +51,7 @@ def get_events():
         "author": e.author,
         "from_branch": e.from_branch,
         "to_branch": e.to_branch,
-        "timestamp": e.timestamp.replace(tzinfo=timezone.utc).isoformat()
+        "timestamp": e.timestamp.isoformat()
     } for e in events])
 
 
