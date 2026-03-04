@@ -40,8 +40,7 @@ requirements.txt └── README.md
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/yourusername/github-webhook-tracker.git cd
-github-webhook-tracker
+git clone https://github.com/sdjml3/webhook-repo.git
 
 ------------------------------------------------------------------------
 
