@@ -41,6 +41,7 @@ requirements.txt └── README.md
 ### 1️⃣ Clone the Repository
 
 git clone https://github.com/sdjml3/webhook-repo.git
+cd webhook-repo
 
 ------------------------------------------------------------------------
 
